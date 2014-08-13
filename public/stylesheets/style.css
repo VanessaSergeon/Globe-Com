@@ -1,8 +1,65 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/**************
+LAYOUT
+**************/
+
+.container {
+  max-width: 1000px;
 }
 
-a {
-  color: #00B7FF;
+#content {
+  margin: 80px 0 0 10px;
 }
+
+/*#dashboard {
+  margin: 70px 0 0 0;
+}*/
+
+#position {
+  margin: 70px 0 0 0;
+}
+
+.sidebar {
+  margin: 100px 0 0 10px;
+  font-size: 1.25em;
+}
+
+#tradeNav {
+  margin: 0 0 20px 0;
+}
+
+
+/**************
+TAB PANELS
+**************/
+
+
+#tradeForm {
+  margin: 70px 0 0 0;
+}
+
+.tab-content{
+  margin: 30px;
+}
+
+label {
+  width: 150px;
+}
+
+#newPrice, #newShipment{
+  margin: 0 0 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

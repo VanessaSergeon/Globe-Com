@@ -1,6 +1,183 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+  <!-- START DASHBOARD -->
+  <div id="dashboard" class="col-md-9">
     <h1>{{title}}</h1>
-    <p>Welcome to {{title}}</p>
+    <hr>
+    <div class="panel-group" id="accordion">
+    <!-- PANEL 1 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              Open Bid-Asks
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Commodity</th>
+                  <th>Quantity</th>
+                  <th>Seller</th>
+                  <th>Buyer</th>
+                  <th>Price</th>
+                  <th>Shipment</th>
+                  <th>DLVD/FOB</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CDSBO</td>
+                  <td>2000mts</td>
+                  <td>ADM</td>
+                  <td></td>
+                  <td>0.50 over</td>
+                  <td>January</td>
+                  <td>FOB Neptune</td>
+                </tr>
+                <tr>
+                  <td>SDW</td>
+                  <td>1000mts</td>
+                  <td>Cargill</td>
+                  <td></td>
+                  <td>1.50 over</td>
+                  <td>February</td>
+                  <td>DLVD Grays Harbor</td>
+                </tr>
+                <tr>
+                  <td>Corn Oil</td>
+                  <td>5000mts</td>
+                  <td></td>
+                  <td>Rich Strong</td>
+                  <td>0.50 under</td>
+                  <td>March</td>
+                  <td>FOB Vanterm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- PANEL 2 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+              Upcoming Trades
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+          <div class="panel-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Contract</th>
+                  <th>Commodity</th>
+                  <th>Quantity</th>
+                  <th>Seller</th>
+                  <th>Buyer</th>
+                  <th>Priced</th>
+                  <th>Scheduled</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12345</td>
+                  <td>SD Corn Oil</td>
+                  <td>2000mts</td>
+                  <td>ADM</td>
+                  <td>Oilseeds</td>
+                  <td>Partial</td>
+                  <td>Has Vessel</td>
+                </tr>
+                <tr>
+                  <td>12346</td>
+                  <td>PBSY</td>
+                  <td>5 Superjumbos</td>
+                  <td>GPC</td>
+                  <td>UTZ</td>
+                  <td>Yes</td>
+                  <td>DLVD Ivorydale</td>
+                </tr>
+                <tr>
+                  <td>12347</td>
+                  <td>Palm Oil</td>
+                  <td>10 Flexi Bags</td>
+                  <td>DCH</td>
+                  <td>Scoular</td>
+                  <td>Yes</td>
+                  <td>DLVD Hong Kong</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- PANEL 3 -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              Late Shipments
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+          <div class="panel-body">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Contract</th>
+                  <th>Commodity</th>
+                  <th>Quantity</th>
+                  <th>Seller</th>
+                  <th>Buyer</th>
+                  <th>Scheduled For</th>
+                  <th>Days Late</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12345</td>
+                  <td>SD Corn Oil</td>
+                  <td>2000mts</td>
+                  <td>ADM</td>
+                  <td>Oilseeds</td>
+                  <td>Jan-15</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>12346</td>
+                  <td>PBSY</td>
+                  <td>5 Superjumbo(s)</td>
+                  <td>GPC</td>
+                  <td>UTZ</td>
+                  <td>Feb-1</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>12347</td>
+                  <td>Palm Oil</td>
+                  <td>10 Flexi Bags</td>
+                  <td>DCH</td>
+                  <td>Scoular</td>
+                  <td>Feb-1</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END DASHBOARD -->
+
+
 {% endblock %}
