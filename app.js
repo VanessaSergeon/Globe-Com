@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var trade = require('./routes/trade');
+var position = require('./routes/position')
 
 var app = express();
 
@@ -25,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/trade', trade);
+app.use('/position', position);
+
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

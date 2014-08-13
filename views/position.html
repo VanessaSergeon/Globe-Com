@@ -2,61 +2,113 @@
 
 {% block content %}
 
-  <!-- START DASHBOARD -->
-  <div id="dashboard" class="col-md-9">
-    <h1>Dasboard</h1>
+  <!-- START POSITION SHEET -->
+  <div id="position" class="col-md-9">
+    <h1>Position Sheet</h1>
     <hr>
+    <form class="form-inline">
+      <select class="form-control">
+        <option>Month</option>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+      <select class="form-control">
+        <option>Year</option>
+        <option>2014</option>
+        <option>2016</option>
+        <option>2017</option>
+        <option>2018</option>
+      </select>
+      <select class="form-control">
+        <option>Seller</option>
+        <optgroup label="ADM">
+          <option value = "1">ADM 1</option>
+          <option value = "2">ADM 2</option>
+          <option value = "3">ADM 3</option>
+        </optgroup>
+        <optgroup label="Cargill">
+          <option value = "x">Carill X</option>
+          <option value = "y">Cargill Y</option>
+          <option value = "z">Cargill Z</option>
+        </optgroup>
+      </select>
+      <select class="form-control">
+        <option>Buyer</option>
+        <optgroup label="Imperium">
+          <option value = "a">Imperium A</option>
+          <option value = "b">Imperium B</option>
+          <option value = "c">Imperium C</option>
+        </optgroup>
+        <optgroup label="Ventura">
+          <option value = "8">Ventura 8</option>
+          <option value = "9">Ventura 9</option>
+          <option value = "10">Ventura 10</option>
+        </optgroup>
+      </select>
+      </form>
+
+    <!-- panels will be generated from server data -->
     <div class="panel-group" id="accordion">
     <!-- PANEL 1 -->
       <div class="panel panel-default">
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-              Open Bid-Asks
+              ADM
             </a>
           </h4>
         </div>
         <div id="collapseOne" class="panel-collapse collapse in">
           <div class="panel-body">
-            <table class="table table-striped">
+            <table class="table table-hover">
               <thead>
                 <tr>
+                  <th>Contract</th>
                   <th>Commodity</th>
                   <th>Quantity</th>
                   <th>Seller</th>
                   <th>Buyer</th>
-                  <th>Price</th>
-                  <th>Shipment</th>
-                  <th>DLVD/FOB</th>
+                  <th>Priced</th>
+                  <th>Scheduled</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>CDSBO</td>
+                  <td>12345</td>
+                  <td>SD Corn Oil</td>
                   <td>2000mts</td>
                   <td>ADM</td>
-                  <td></td>
-                  <td>0.50 over</td>
-                  <td>January</td>
-                  <td>FOB Neptune</td>
+                  <td>Oilseeds</td>
+                  <td>Partial</td>
+                  <td>Has Vessel</td>
                 </tr>
                 <tr>
-                  <td>SDW</td>
-                  <td>1000mts</td>
-                  <td>Cargill</td>
-                  <td></td>
-                  <td>1.50 over</td>
-                  <td>February</td>
-                  <td>DLVD Grays Harbor</td>
+                  <td>12346</td>
+                  <td>PBSY</td>
+                  <td>5 Superjumbos</td>
+                  <td>GPC</td>
+                  <td>UTZ</td>
+                  <td>Yes</td>
+                  <td>DLVD Ivorydale</td>
                 </tr>
                 <tr>
-                  <td>Corn Oil</td>
-                  <td>5000mts</td>
-                  <td></td>
-                  <td>Rich Strong</td>
-                  <td>0.50 under</td>
-                  <td>March</td>
-                  <td>FOB Vanterm</td>
+                  <td>12347</td>
+                  <td>Palm Oil</td>
+                  <td>10 Flexi Bags</td>
+                  <td>DCH</td>
+                  <td>Scoular</td>
+                  <td>Yes</td>
+                  <td>DLVD Hong Kong</td>
                 </tr>
               </tbody>
             </table>
@@ -68,7 +120,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-              Upcoming Trades
+              Cargill
             </a>
           </h4>
         </div>
@@ -124,7 +176,7 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-              Late Shipments
+              Imperium
             </a>
           </h4>
         </div>
@@ -138,8 +190,8 @@
                   <th>Quantity</th>
                   <th>Seller</th>
                   <th>Buyer</th>
-                  <th>Scheduled For</th>
-                  <th>Days Late</th>
+                  <th>Priced</th>
+                  <th>Scheduled</th>
                 </tr>
               </thead>
               <tbody>
@@ -149,17 +201,17 @@
                   <td>2000mts</td>
                   <td>ADM</td>
                   <td>Oilseeds</td>
-                  <td>Jan-15</td>
-                  <td>20</td>
+                  <td>Partial</td>
+                  <td>Has Vessel</td>
                 </tr>
                 <tr>
                   <td>12346</td>
                   <td>PBSY</td>
-                  <td>5 Superjumbo(s)</td>
+                  <td>5 Superjumbos</td>
                   <td>GPC</td>
                   <td>UTZ</td>
-                  <td>Feb-1</td>
-                  <td>5</td>
+                  <td>Yes</td>
+                  <td>DLVD Ivorydale</td>
                 </tr>
                 <tr>
                   <td>12347</td>
@@ -167,8 +219,8 @@
                   <td>10 Flexi Bags</td>
                   <td>DCH</td>
                   <td>Scoular</td>
-                  <td>Feb-1</td>
-                  <td>5</td>
+                  <td>Yes</td>
+                  <td>DLVD Hong Kong</td>
                 </tr>
               </tbody>
             </table>
@@ -177,7 +229,6 @@
       </div>
     </div>
   </div>
-  <!-- END DASHBOARD -->
-
+  <!-- END POSITION SHEET -->
 
 {% endblock %}

@@ -1,0 +1,403 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <!-- START CONTRACT -->
+    <div id="tradeForm" class="col-md-9">
+      <h1>Trade Contract</h1>
+      <hr>
+
+      <!-- TRADE NAV BUTTONS -->
+      <div id="tradeNav">
+        <div class="btn-group">
+          <button class="btn btn-default">
+          <span class="glyphicon glyphicon-arrow-left"></span>
+             Previous
+          </button>
+          <button class="btn btn-default">
+          Next
+          <span class="glyphicon glyphicon-arrow-right"></span>
+          </button>
+        </div>
+        <button class="btn btn-default">Save</button>
+
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            E-Mail <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Both Parties</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Seller</a></li>
+            <li><a href="#">Buyer</a></li>
+          </ul>
+        </div>
+
+
+        <button class="btn btn-default">PDF</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            New Trade <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">New Trade</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Reserve Contract Numbers</a></li>
+            <li><a href="#">Blank Contract</a></li>
+          </ul>
+        </div>
+        <button class="btn btn-danger">Delete</button>
+      </div>
+
+      <!-- CONTRACT TABS -->
+      <ul id="tradeTabs" class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#trade" role="tab" data-toggle="tab">Trade</a></li>
+        <li><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
+        <li><a href="#schedule" role="tab" data-toggle="tab">Schedule</a></li>
+        <li><a href="#documents" role="tab" data-toggle="tab">Documents</a></li>
+        <li><a href="#commission" role="tab" data-toggle="tab">Commission Status</a></li>
+      </ul>
+      <div class="tab-content">
+
+
+      <!-- START TRADE FORM PANE -->
+        <div class="tab-pane fade in active" id="trade">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>Contract Numbers </label>
+              <input type="text" class="form-control" id="gcContractNum" placeholder="GC's #" disabled>
+              <input type="text" class="form-control" id="sellerNum" placeholder="Seller's #">
+              <input type="text" class="form-control" id="buyerNum" placeholder="Buyer's #">
+            </div>
+          </form>
+          <form class="form-inline">
+            <label>Trade Parties </label>
+            <select class="form-control">
+              <option>Seller</option>
+              <optgroup label="ADM">
+                <option value = "1">ADM 1</option>
+                <option value = "2">ADM 2</option>
+                <option value = "3">ADM 3</option>
+              </optgroup>
+              <optgroup label="Cargill">
+                <option value = "x">Carill X</option>
+                <option value = "y">Cargill Y</option>
+                <option value = "z">Cargill Z</option>
+              </optgroup>
+            </select>
+            <select class="form-control">
+              <option>Buyer</option>
+              <optgroup label="Imperium">
+                <option value = "a">Imperium A</option>
+                <option value = "b">Imperium B</option>
+                <option value = "c">Imperium C</option>
+              </optgroup>
+              <optgroup label="Ventura">
+                <option value = "8">Ventura 8</option>
+                <option value = "9">Ventura 9</option>
+                <option value = "10">Ventura 10</option>
+              </optgroup>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Commodity</label>
+            <select class="form-control">
+              <option>-</option>
+              <option>Conola Oil</option>
+              <option>Corn Oil</option>
+              <option>Palm Oil</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Crude</option>
+              <option>Refined</option>
+              <option>Super Degummed</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Imperium 101</option>
+              <option>ADM 102</option>
+              <option>Cagill 103</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Quantity</label>
+            <input type="number" class="form-control">
+            <select class="form-control">
+              <option>MTS</option>
+              <option>LBS</option>
+              <option>Supers</option>
+              <option>Megas</option>
+              <option>Trucks</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Approximately</option>
+              <option>2% more or less</option>
+              <option>5% more or less</option>
+              <option>Min/Max</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Payment</label>
+            <select class="form-control">
+              <option>-</option>
+              <option>Cash Against Documents</option>
+              <option>Pre-Payment</option>
+              <option>Credit</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Net 15 Days</option>
+              <option>Net 30 Days</option>
+              <option>Net 45 Days</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Shipment</label>
+            <select class="form-control">
+              <option>-</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2016</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Scattered</option>
+              <option>First half</option>
+              <option>Last half</option>
+              <option>Week 1</option>
+              <option>Week 2</option>
+              <option>Week 3</option>
+              <option>Week 4</option>
+              <option>Week 5</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>DLVD</option>
+              <option>FOB</option>
+              <option>CIF</option>
+              <option>Wash Out</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Superjumbo Railcar</option>
+              <option>Megajumbo Railcar</option>
+              <option>Truck</option>
+              <option>Vessel</option>
+              <option>Flexi Tank</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Destination</label>
+            <input class="form-control" type="text" placeholder="or Pickup">
+          </form>
+          <form class="form-inline">
+            <label>Commission</label>
+            <select class="form-control">
+              <option>0</option>
+              <optgroup label="CTS/CWT">
+                <option value = .0005>5 cts/cwt</option>
+                <option value = .001>10 cts/cwt</option>
+                <option selected value = .0015>15 cts/cwt</option>
+                <option value = .0020>20 cts/cwt</option>
+                <option value = .0050>50 cts/cwt</option>
+              </optgroup>
+              <optgroup label="USD/MT">
+                <option value = 1>1 usd/mt</option>
+                <option value = 2>2 usd/mt</option>
+                <option value = 3>3 usd/mt</option>
+              </optgroup>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>Lo Kong</option>
+              <option>Mike Fletcher</option>
+              <option>Moving Parts</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>10%</option>
+              <option>25%</option>
+              <option>50%</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Price</label>
+            <input class="form-control" type="text">
+            <select class="form-control">
+              <option>USD/MT</option>
+              <option>CTS/LB</option>
+            </select>
+            <select class="form-control">
+              <option>Flat</option>
+              <option>Over</option>
+              <option>Under</option>
+            </select>
+          </form>
+          <form class="form-inline"> <!-- should fade in when over or under is selected -->
+            <label>Futures</label>
+            <input class="form-control" type="number">
+            <select class="form-control">
+              <option>-</option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+            <select class="form-control">
+              <option>-</option>
+              <option>2014</option>
+              <option>2015</option>
+              <option>2016</option>
+            </select>
+            <label class="checkbox-inline">
+              <input type="checkbox">Refining Loss
+            </label>
+          </form>
+          <form class="form-inline">
+            <label>Adjustment</label>
+            <input class="form-control" type="text" placeholder="00.00 cts/lb">
+            <select class="form-control">
+              <option>2%</option>
+              <option selected>3%</option>
+              <option>4%</option>
+              <option>6%</option>
+            </select>
+          </form>
+          <form class="form-inline">
+            <label>Full Price</label>
+            <input class="form-control" type="text" disabled>
+          </form>
+          <form class="form-inline">
+            <label>Details</label>
+            <textarea class="form-control" rows="2" cols="100" placeholder="Please indicate any unique instructions here."></textarea>
+          </form>
+        </div>
+      <!-- END TRADE FORM PANE-->
+
+
+
+      <!-- START PRICING FORM PANE -->
+        <div class="tab-pane fade" id="pricing">
+          <button id="newPrice" type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-plus"></span> New Pricing
+          </button>
+          <form class="form-inline">
+            <label>Average Price</label>
+            <input class="form-control" type="text" disabled>
+          </form>
+          <div id="prices">
+          <form class="form-inline">
+
+          </form>
+          </div>
+        </div>
+      <!-- END PRICING FORM PANE -->
+
+
+
+      <!-- START SCHEDULE FORM PANE -->
+        <div class="tab-pane fade" id="schedule">
+          <form class="form-inline">
+            <label>Total Shipped</label>
+            <input class="form-control" type="text" disabled>
+          </form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>PO</th>
+                <th>Scheduled</th>
+                <th>Shipped</th>
+                <th>ID</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+              </tr>
+              <tr>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+                <td><input class="form-control" type="text"></td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="newShipment" type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-plus"></span> New Shipment
+          </button>
+          <!-- will add a new schedule row -->
+        </div>
+      <!-- END SCHEDULE FORM PANE -->
+
+
+
+      <!-- START DOCUMENTS FORM PANE -->
+        <div class="tab-pane fade" id="documents">
+          <h4>BOLs</h4>
+          <input type="file">
+          <hr>
+          <h4>COAs</h4>
+          <input type="file">
+          <hr>
+          <h4>Invoices</h4>
+          <input type="file">
+        </div>
+      <!-- END DOCUMENTS FORM PANE -->
+
+
+
+      <!-- START COMMISSION FORM PANE -->
+        <div class="tab-pane fade" id="commission">
+          <form class="form-inline">
+            <label>Total Commission</label>
+            <input class="form-control" type="text" disabled>
+          </form>
+          <form class="form-inline">
+            <label>Amount Paid</label>
+            <input class="form-control" type="text">
+          </form>
+          <form class="form-inline">
+            <label>Amount Due</label>
+            <input class="form-control" type="text">
+          </form>
+        </div>
+      <!-- END COMMISSION FORM PANE -->
+
+
+  </div>
+  </div> <!-- end tradeForm div -->
+    <!-- END CONTRACT -->
+
+{% endblock %}
