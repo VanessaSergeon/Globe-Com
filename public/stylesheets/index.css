@@ -1,0 +1,47 @@
+/**************
+LAYOUT
+**************/
+
+.container {
+  max-width: 1000px;
+}
+
+body {
+  padding: 0 0 0 0;
+}
+
+
+/**************
+CAROUSEL
+**************/
+
+.carousel {
+  margin: -20px 0 0 0;
+  height: 300px;
+}
+
+.carousel .item {
+  padding: 0 0 0 80px;
+}
+
+.carousel .item h1 p a {
+  clear: left;
+}
+
+.carousel .item img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.carousel-indicators .active {
+  background-color: #222;
+}
+
+.carousel-indicators li {
+  border-color: #222;
+}
+/*
+img {
+  height: 200px;
+  width: 350px;
+}*/
