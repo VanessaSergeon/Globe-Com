@@ -21,7 +21,6 @@
         </div>
         <button class="btn btn-default">Save</button>
 
-
         <div class="btn-group">
           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             E-Mail <span class="caret"></span>
@@ -33,7 +32,6 @@
             <li><a href="#">Buyer</a></li>
           </ul>
         </div>
-
 
         <button class="btn btn-default">PDF</button>
         <div class="btn-group">
@@ -308,7 +306,7 @@
             <span class="glyphicon glyphicon-plus"></span> New Pricing
           </button>
           <form class="form-inline">
-            <label>Average Price</label>
+            <label>Futures Average</label>
             <input class="form-control" type="text" disabled>
           </form>
           <div id="prices">
@@ -323,6 +321,9 @@
 
       <!-- START SCHEDULE FORM PANE -->
         <div class="tab-pane fade" id="schedule">
+          <button id="newShipment" type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-plus"></span> New Shipment
+          </button>
           <form class="form-inline">
             <label>Total Shipped</label>
             <input class="form-control" type="text" disabled>
@@ -337,14 +338,7 @@
                 <th>Quantity</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td><input class="form-control" type="text"></td>
-                <td><input class="form-control" type="text"></td>
-                <td><input class="form-control" type="text"></td>
-                <td><input class="form-control" type="text"></td>
-                <td><input class="form-control" type="text"></td>
-              </tr>
+            <tbody id="scheduleTable">
               <tr>
                 <td><input class="form-control" type="text"></td>
                 <td><input class="form-control" type="text"></td>
@@ -354,10 +348,6 @@
               </tr>
             </tbody>
           </table>
-          <button id="newShipment" type="button" class="btn btn-default btn-sm">
-            <span class="glyphicon glyphicon-plus"></span> New Shipment
-          </button>
-          <!-- will add a new schedule row -->
         </div>
       <!-- END SCHEDULE FORM PANE -->
 
@@ -381,7 +371,11 @@
       <!-- START COMMISSION FORM PANE -->
         <div class="tab-pane fade" id="commission">
           <form class="form-inline">
-            <label>Total Commission</label>
+            <label>GCL Commission</label>
+            <input class="form-control" type="text" disabled>
+          </form>
+          <form class="form-inline">
+            <label>CO-Broker Commission</label>
             <input class="form-control" type="text" disabled>
           </form>
           <form class="form-inline">
